@@ -14,5 +14,6 @@
     }:
     flake-utils.lib.meld inputs [
       ./packages/development
+      ./overlays
     ];
 }
