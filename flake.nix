@@ -1,0 +1,18 @@
+{
+  description = "Nixos flake outputs: packages";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+    nixvim.url = "github:nix-community/nixvim";
+  };
+
+  outputs =
+    inputs@{
+      flake-utils,
+      ...
+    }:
+    flake-utils.lib.meld inputs [
+      ./packages/development
+    ];
+}
