@@ -13,10 +13,7 @@ flake-utils.lib.eachDefaultSystem (
   in
   {
     packages = {
-      default = pkgs.callPackage ./neovim { inherit nixvim; };
-      development = {
-        editor = self.packages.${system}.default;
-      };
+      neovim = pkgs.callPackage ./neovim { inherit nixvim; };
     };
   }
 )

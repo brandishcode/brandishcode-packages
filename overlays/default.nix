@@ -1,4 +1,4 @@
-{ self, flake-utils, ... }:
+{ flake-utils, ... }:
 
 flake-utils.lib.eachDefaultSystemPassThrough (system:
 
