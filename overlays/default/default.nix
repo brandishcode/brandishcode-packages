@@ -1,5 +1,3 @@
-{ development }:
-
 final: prev: {
-  neovim = development.editor;
+  neovim = prev.callPackages ../../packages/development/neovim { };
 }
