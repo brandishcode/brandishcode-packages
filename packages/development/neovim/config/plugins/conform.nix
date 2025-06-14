@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
+let
+  formatter = "bctreefmt";
+in
 {
   extraPackages = with pkgs; [
     nixfmt-rfc-style
@@ -20,9 +23,20 @@
         require("conform").format({ async = true, lsp_format = "fallback", range = range })
       end, { range = true })
     '';
-    settings.formatters_by_ft = {
-      nix = [ "nixfmt" ];
-      lua = [ "lua-format" ];
+    settings = {
+      formatters_by_ft = {
+        nix = [ formatter ];
+        lua = [ formatter ];
+      };
+      formatters = {
+        ${formatter} = {
+          command = lib.getExe pkgs.treefmt;
+          args = [
+            "--stdin"
+            "$FILENAME"
+          ];
+        };
+      };
     };
   };
   keymaps = [
