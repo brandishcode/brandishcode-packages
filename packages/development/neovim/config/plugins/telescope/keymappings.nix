@@ -36,6 +36,26 @@
         desc = "Telescope [S]earch [H]elp";
       };
     }
+    {
+      key = "<leader>tgb";
+      action = {
+        __raw = ''
+          function()
+            require"telescope.builtin".git_branches()
+          end
+        '';
+      };
+    }
+    {
+      key = "<leader>tgs";
+      action = {
+        __raw = ''
+          function()
+            require"telescope.builtin".git_stash()
+          end
+        '';
+      };
+    }
   ];
 
   autoGroups = {
