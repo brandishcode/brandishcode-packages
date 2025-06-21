@@ -16,7 +16,10 @@ flake-utils.lib.eachDefaultSystem (
   in
   {
     packages = {
-      neovim = pkgs.callPackage ./neovim { inherit nixvim; };
+      nixessity = pkgs.callPackage ./nixessity { };
+      neovim = (pkgs.callPackage ./neovim { inherit nixvim; }).extend {
+        extraPlugins = [ self.packages.${system}.nixessity ];
+      };
     };
   }
 )
