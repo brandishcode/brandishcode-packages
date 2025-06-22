@@ -5,14 +5,15 @@
   ...
 }:
 
-vimUtils.buildVimPlugin {
+vimUtils.buildVimPlugin rec {
   name = "nixessity";
+  pname = name;
+  version = "1.0.1-alpha";
   src = fetchFromGitHub {
     owner = "brandishcode";
     repo = "nixessity";
-    rev = "9bf06434083ce215d2cabacef21b5ff32517cc86";
-    hash = "sha256-EFd6xYY0PuUmbG2kLbM4T3Sm3MHMZB7OI6sWcpA3WGs=";
+    rev = "v${version}";
+    hash = "sha256-cA0wsiLqSMbQJ9iot0Bfg16XueitkB5bC3xwZG4vB/g=";
   };
   dependencies = [ vimPlugins.plenary-nvim ];
-  nvimSkipModules = [ "config" ];
 }
