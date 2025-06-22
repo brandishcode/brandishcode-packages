@@ -2,8 +2,10 @@
   pkgs,
   system,
   nixvim,
+  nixessity,
   jsSupport ? false,
   javaSupport ? false,
+  nixessityConfig ? null,
   ...
 }:
 
@@ -23,6 +25,8 @@ nixvimPkgs.makeNixvimWithModule {
       jdk17
       jdk24
       lombok
+      nixessity
+      nixessityConfig
       ;
   };
 }

@@ -7,6 +7,7 @@
     ./undotree.nix
     ./treesitter.nix
     ./neorg.nix
+    ./nixessity.nix
   ];
 
   plugins = {
