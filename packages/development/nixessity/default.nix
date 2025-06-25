@@ -8,12 +8,15 @@
 vimUtils.buildVimPlugin rec {
   name = "nixessity";
   pname = name;
-  version = "9bc566940c5044d484c0f412764e08c13206f744";
+  version = "e1b15fae11b61233090ff3a707f5d1272d80847a";
   src = fetchFromGitHub {
     owner = "brandishcode";
     repo = "nixessity";
     rev = version;
-    hash = "sha256-f7MHoql6OI9UNOLVyg+cNIZUFizsG1rM/hvm+AI6hAM=";
+    hash = "sha256-tbJj4lA7kkbVUZ2LNfQ/U+kYEO8XLQ9qmGv+78h8x48=";
   };
-  dependencies = with vimPlugins; [ plenary-nvim sqlite-lua ];
+  dependencies = with vimPlugins; [
+    plenary-nvim
+    sqlite-lua
+  ];
 }
