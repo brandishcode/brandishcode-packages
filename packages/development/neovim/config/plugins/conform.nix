@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  treefmt,
+  ...
+}:
 
 let
   formatter = "bctreefmt";
@@ -30,7 +35,7 @@ in
       };
       formatters = {
         ${formatter} = {
-          command = lib.getExe pkgs.treefmt;
+          command = lib.getExe treefmt;
           args = [
             "--stdin"
             "$FILENAME"

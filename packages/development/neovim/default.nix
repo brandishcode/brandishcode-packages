@@ -6,6 +6,7 @@
   jsSupport ? false,
   javaSupport ? false,
   nixessityConfig ? null,
+  treefmt ? pkgs.treefmt,
   ...
 }:
 
@@ -27,6 +28,7 @@ nixvimPkgs.makeNixvimWithModule {
       lombok
       nixessity
       nixessityConfig
+      treefmt
       ;
   };
 }
