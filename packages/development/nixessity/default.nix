@@ -8,12 +8,12 @@
 vimUtils.buildVimPlugin rec {
   name = "nixessity";
   pname = name;
-  version = "a5016d8b32e6ecd613d6571c70615c15df3136e4";
+  version = "48bb0b3dfe0a20f9274361a365e5ad5acef2f4c0";
   src = fetchFromGitHub {
     owner = "brandishcode";
     repo = "nixessity";
     rev = version;
-    hash = "sha256-MQqfCJ1k4xk3y6ZqyQTgmatYJyELG9qJP5/HdHcc+nY=";
+    hash = "sha256-myJ1UqB/5QYbV8XBOp0HDVIpG97Hy3EZdShivnIqdBo=";
   };
   dependencies = with vimPlugins; [
     plenary-nvim
