@@ -3,12 +3,12 @@
     undotree.enable = true;
   };
 
-  keymaps = [
-    {
-      key = "<leader>ut";
-      action = "<cmd>UndotreeToggle<cr>";
-    }
-  ];
+  # keymaps = [
+  #   {
+  #     key = "<leader>ut";
+  #     action = "<cmd>UndotreeToggle<cr>";
+  #   }
+  # ];
 
   extraConfigVim = ''
       if has("persistent_undo")

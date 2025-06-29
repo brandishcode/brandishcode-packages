@@ -56,6 +56,16 @@
         '';
       };
     }
+    {
+      key = "<leader>ut";
+      action = {
+        __raw = ''
+          function()
+            require"telescope".extensions.undo.undo()
+          end
+        '';
+      };
+    }
   ];
 
   autoGroups = {
