@@ -3,6 +3,7 @@
   nixpkgs,
   flake-utils,
   nixvim,
+  nixessitycore,
   ...
 }:
 
@@ -18,7 +19,7 @@ flake-utils.lib.eachDefaultSystem (
     packages = {
       default = self.outputs.packages.${system}.neovim;
       nixessity = pkgs.callPackage ./nixessity { };
-      nixessitycore = pkgs.callPackage ./nixessitycore { };
+      nixessitycore = nixessitycore.packages.${system}.default;
       neovim = pkgs.callPackage ./neovim {
         inherit nixvim;
         nixessity = self.packages.${system}.nixessity;

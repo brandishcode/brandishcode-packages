@@ -6,6 +6,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixvim.url = "github:nix-community/nixvim";
     bcfmt.url = "github:brandishcode/brandishcode-formatter";
+    nixessitycore.url = "github:brandishcode/nixessitycore";
   };
 
   outputs =
