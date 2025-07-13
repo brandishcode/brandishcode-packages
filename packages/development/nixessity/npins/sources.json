@@ -1,0 +1,18 @@
+{
+  "pins": {
+    "nixessity": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "brandishcode",
+        "repo": "nixessity"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "d23a6bfc0314bd81f39f841a6300b37146dcfbdc",
+      "url": "https://github.com/brandishcode/nixessity/archive/d23a6bfc0314bd81f39f841a6300b37146dcfbdc.tar.gz",
+      "hash": "0b7kckf929a5rw5f0xkgz38zwsh9n2hs2jdf1cjqh753flzwnpdn"
+    }
+  },
+  "version": 5
+}

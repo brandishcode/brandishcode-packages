@@ -5,10 +5,15 @@
   ...
 }:
 
+let
+  sources = import ./npins;
+  version = sources.nixessity.revision;
+  hash = sources.nixessity.hash;
+in
 vimUtils.buildVimPlugin rec {
   name = "nixessity";
   pname = name;
-  version = "d23a6bfc0314bd81f39f841a6300b37146dcfbdc";
+  inherit version;
   src = fetchFromGitHub {
     owner = "brandishcode";
     repo = "nixessity";
