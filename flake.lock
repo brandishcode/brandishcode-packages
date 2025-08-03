@@ -186,11 +186,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1754143065,
-        "narHash": "sha256-7ruir/kY/4gHhjduuKLGHbWRtu5IOE+UMNrpT/+LGB0=",
+        "lastModified": 1754204671,
+        "narHash": "sha256-mXnwB2ub/dIev3MNP/tTeQNu08d8ekxqVW2hRbqbqIQ=",
         "owner": "brandishcode",
         "repo": "nixessitycore",
-        "rev": "48ab4e72c821f819dd7b394afc44cd0c107a1365",
+        "rev": "30ef01cb7588e73cfd64a486e074e216877306e5",
         "type": "github"
       },
       "original": {
