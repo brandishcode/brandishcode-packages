@@ -8,7 +8,6 @@
 let
   sources = import ./npins;
   version = sources.nixessity.revision;
-  hash = sources.nixessity.hash;
 in
 vimUtils.buildVimPlugin rec {
   name = "nixessity";
@@ -18,7 +17,7 @@ vimUtils.buildVimPlugin rec {
     owner = "brandishcode";
     repo = "nixessity";
     rev = version;
-    hash = "sha256-tl3LP3WjHIglC65JoaGwCWr+0fhvduAKz0Ulkdxk8yw=";
+    hash = "sha256-rhO18pSBkLG+MvbmFpYQGxhbXBmhCuWek+TO5kAvLuA=";
   };
   dependencies = with vimPlugins; [
     plenary-nvim
