@@ -22,8 +22,8 @@
   };
   plugins.conform-nvim = {
     settings.formatters_by_ft = {
-      cpp = with pkgs; [ clang-format ];
-      cmake = with pkgs; [ cmake-format ];
+      cpp = [ "clang-format" ];
+      cmake = [ "cmake-format" ];
     };
   };
 }
