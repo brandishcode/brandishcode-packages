@@ -5,6 +5,7 @@
   nixessity,
   jsSupport ? false,
   javaSupport ? false,
+  cppSupport ? false,
   nixessityConfig ? null,
   treefmt ? pkgs.treefmt,
   ...
@@ -22,6 +23,7 @@ nixvimPkgs.makeNixvimWithModule {
     inherit
       jsSupport
       javaSupport
+      cppSupport
       jdt-language-server
       jdk17
       jdk24

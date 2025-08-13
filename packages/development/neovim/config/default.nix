@@ -15,4 +15,8 @@
       style = "night";
     };
   };
+
+  extraConfigVim = ''
+    set clipboard=unnamedplus
+  '';
 }
