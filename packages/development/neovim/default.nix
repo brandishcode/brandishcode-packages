@@ -27,6 +27,7 @@ nixvimPkgs.makeNixvimWithModule {
       jdt-language-server
       jdk17
       jdk24
+      jdk25
       lombok
       nixessity
       nixessityConfig

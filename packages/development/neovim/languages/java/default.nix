@@ -3,6 +3,7 @@
   lib,
   jdk17,
   jdk24,
+  jdk25,
   lombok,
   ...
 }:
@@ -16,6 +17,11 @@ let
   javaSE24 = {
     name = "JavaSE-24";
     path = "${jdk24}/lib/openjdk";
+    default = true;
+  };
+  javaSE25 = {
+    name = "JavaSE-25";
+    path = "${jdk25}/lib/openjdk";
     default = true;
   };
 in
@@ -37,6 +43,7 @@ in
             runtimes = [
               javaSE17
               javaSE24
+              javaSE25
             ];
           };
         };
